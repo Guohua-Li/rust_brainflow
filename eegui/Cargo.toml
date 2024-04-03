@@ -3,12 +3,21 @@ name = "eegui"
 version = "0.1.0"
 authors = ["GUOHUA LI"]
 edition = "2021"
+rust-version = "1.77.1"
 
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[[bin]]
+name = "demo1"
+path = "demo1/main.rs"
 
 [dependencies]
-#serde  = { version = "1", features = ["derive"], optional = true }
-egui   = "0.23.0"
-eframe = "0.23.0"
-emath  = "0.23.0"
+egui      = "0.27.2"
+egui_plot = "0.27.2"
+eframe    = "0.27.2"
+emath     = "0.27.2"
+ndarray   = "0.15.6"
 brainflow = { path = "../brainflow" }
 
