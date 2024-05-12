@@ -3,7 +3,7 @@ name = "eegui"
 version = "0.1.0"
 authors = ["GUOHUA LI"]
 edition = "2021"
-rust-version = "1.77.1"
+rust-version = "1.78.0"
 
 [[bin]]
 name = "main"
@@ -12,6 +12,14 @@ path = "src/main.rs"
 [[bin]]
 name = "demo1"
 path = "demo1/main.rs"
+
+[[bin]]
+name = "demo2"
+path = "demo2/main.rs"
+
+[[bin]]
+name = "demo3"
+path = "demo3/main.rs"
 
 [dependencies]
 egui      = "0.27.2"
