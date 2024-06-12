@@ -21,6 +21,14 @@ path = "demo2/main.rs"
 name = "demo3"
 path = "demo3/main.rs"
 
+[[bin]]
+name = "demo4"
+path = "demo4/main.rs"
+
+[[bin]]
+name = "demo5"
+path = "demo5/main.rs"
+
 [dependencies]
 egui      = "0.27.2"
 egui_plot = "0.27.2"
