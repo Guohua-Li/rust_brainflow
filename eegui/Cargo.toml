@@ -3,7 +3,6 @@ name = "eegui"
 version = "0.1.0"
 authors = ["GUOHUA LI"]
 edition = "2021"
-rust-version = "1.78.0"
 
 [[bin]]
 name = "main"
@@ -30,10 +29,10 @@ name = "demo5"
 path = "demo5/main.rs"
 
 [dependencies]
-egui      = "0.27.2"
-egui_plot = "0.27.2"
-eframe    = "0.27.2"
-emath     = "0.27.2"
-ndarray   = "0.15.6"
+egui      = "0.29.1"
+egui_plot = "0.29.0"
+eframe    = "0.29.1"
+emath     = "0.29.1"
+ndarray   = "0.16.1"
 brainflow = { path = "../brainflow" }
 
