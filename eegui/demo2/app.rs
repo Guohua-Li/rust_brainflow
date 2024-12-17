@@ -1,4 +1,5 @@
 use std::collections::HashSet;
+use std::sync::Arc;
 
 use egui::{
    CentralPanel, TopBottomPanel, Ui, Context, Response,
@@ -222,7 +223,10 @@ pub fn configure_fonts(ctx: &Context) {
    let mut fonts: FontDefinitions = FontDefinitions::default();
    fonts.font_data.insert(
       "MesloLGS".to_owned(),
-      FontData::from_static(include_bytes!("../fonts/MesloLGS_NF_Regular.ttf"))
+      //FontData::from_static(include_bytes!("../fonts/MesloLGS_NF_Regular.ttf"))
+        Arc::new(FontData::from_static(include_bytes!(
+            "../fonts/MesloLGS_NF_Regular.ttf"
+        ))),
    );
    fonts.families.get_mut(&FontFamily::Proportional)
    .unwrap()
