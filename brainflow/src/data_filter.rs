@@ -516,7 +516,7 @@ pub fn get_csp<Labels>(
     unsafe { output_eigenvalues.set_len(n_channels) };
 
     let output_filters = ArrayBase::from_vec(output_filters);
-    let output_filters = output_filters.into_shape((n_channels, n_channels)).unwrap();
+    let output_filters = output_filters.into_shape_with_order((n_channels, n_channels)).unwrap();
     let output_eigenvalues = Array1::from(output_eigenvalues);
     Ok((output_filters, output_eigenvalues))
 }
@@ -832,7 +832,7 @@ pub fn read_file<S: AsRef<str>>(file_name: S) -> Result<Array2<f64>> {
 
     unsafe { data.set_len(num_elements as usize) };
     let data = ArrayBase::from_vec(data);
-    let data = data.into_shape((rows as usize, cols as usize)).unwrap();
+    let data = data.into_shape_with_order((rows as usize, cols as usize)).unwrap();
     Ok(data)
 }
 
