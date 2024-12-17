@@ -73,7 +73,7 @@ impl<'a> Plot<'a> {
 
    pub fn show(self, ui: &mut Ui, raw_data: &Vec<Pos2>) { //mut 
       let id_string = format!("{}", "resize".to_string());
-      Resize::default().id_source(id_string).fixed_size(self.size).show(ui, |ui: &mut Ui| {
+      Resize::default().id_salt(id_string).fixed_size(self.size).show(ui, |ui: &mut Ui| {
          let (response, mut painter) = ui.allocate_painter(ui.available_size(), Sense::drag()); // click_and_drag
          // if we use Sense::hover(), click(), dragging not work
          let canvas_rect = Rect::from_min_max(
