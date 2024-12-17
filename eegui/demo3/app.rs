@@ -118,7 +118,7 @@ impl MyApp {
          let row_data: Vec<Pos2> = all_data.row(*chn).iter().enumerate().map(|(i, y)| {
             Pos2 { x: i as f32,  y: *y as f32 }
          }).collect();
-         let resize = Resize::default().id_source(format!("{}", chn)).fixed_size(self.plt_size);
+         let resize = Resize::default().id_salt(format!("{}", chn)).fixed_size(self.plt_size);
          resize.show(ui, |ui: &mut Ui| {
             let space: Vec2 = ui.available_size();
             //println!("{}", space == self.plt_size);
