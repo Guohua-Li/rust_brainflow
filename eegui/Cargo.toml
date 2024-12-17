@@ -29,10 +29,10 @@ name = "demo5"
 path = "demo5/main.rs"
 
 [dependencies]
-egui      = "0.29.1"
-egui_plot = "0.29.0"
-eframe    = "0.29.1"
-emath     = "0.29.1"
+egui      = "0.30.0"
+egui_plot = "0.30.0"
+eframe    = "0.30.0"
+emath     = "0.30.0"
 ndarray   = "0.16.1"
 brainflow = { path = "../brainflow" }
 
