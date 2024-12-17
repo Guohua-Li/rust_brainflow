@@ -73,7 +73,7 @@ impl<'a> Plot<'a> {
 
    pub fn show(self, ui: &mut Ui, raw_data: &Vec<Pos2>, id: usize) {
       let id_string = format!("{}", id);
-      Resize::default().id_source(id_string).fixed_size(self.size).show(ui, |ui: &mut Ui| {
+      Resize::default().id_salt(id_string).fixed_size(self.size).show(ui, |ui: &mut Ui| {
          let (response, mut painter) = ui.allocate_painter(ui.available_size(), Sense::drag());
          let canvas_rect = Rect::from_min_max(
             response.rect.min + vec2(if self.show_yticks { 40.0 } else { 0.0 }, 0.0),
