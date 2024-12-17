@@ -187,7 +187,7 @@ impl MyApp {
    }
 
    fn plot_xaxis(&mut self, ui: &mut Ui, s: Vec2) {
-      Resize::default().id_source(format!("{}", 1)).fixed_size(s).show(ui, |ui: &mut Ui| {
+      Resize::default().id_salt(format!("{}", 1)).fixed_size(s).show(ui, |ui: &mut Ui| {
          let (response, painter) = ui.allocate_painter(s, Sense::drag() ); //mut painter
          let xaxis_rect = Rect::from_min_max(
             response.rect.min + vec2(if self.yaxis_on { 40.0 } else { 0.0 }, 0.0),
