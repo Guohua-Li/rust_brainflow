@@ -7,6 +7,7 @@ use ndarray::{
    Dim,
 };*/
 
+use std::sync::Arc;
 use ndarray::Array2; // Array<A, Dim<[usize; 2]>>
 
 use egui::{
@@ -188,7 +189,11 @@ pub fn configure_fonts(ctx: &Context) {
    let mut fonts = FontDefinitions::default();
    fonts.font_data.insert(
        "MesloLGS".to_owned(),
-       FontData::from_static(include_bytes!("../fonts/MesloLGS_NF_Regular.ttf"))
+       //FontData::from_static(include_bytes!("../fonts/MesloLGS_NF_Regular.ttf"))
+        Arc::new(FontData::from_static(include_bytes!(
+            "../fonts/MesloLGS_NF_Regular.ttf"
+        ))),
+
    );
 
    fonts.families.get_mut(&FontFamily::Proportional)
@@ -201,8 +206,3 @@ pub fn configure_fonts(ctx: &Context) {
 
    ctx.set_fonts(fonts);
 }
-
-
-/*fn print_type_of<T>(_: &T) {
-    println!("{}", std::any::type_name::<T>())
-}*/
